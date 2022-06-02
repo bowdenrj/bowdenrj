@@ -1,0 +1,200 @@
+html{
+  background-color: #333;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    line-height: 2em;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4
+
+}
+
+/*Global*/
+.container{
+  width:80%;
+  margin:auto;
+  overflow: hidden;
+
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+.authorbox{
+  padding: 1.5em;
+  background: #333;
+  color: #999;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+.dark{
+  padding: 1.5em;
+  background: #222;
+  color: #999;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+header{
+    background:#777;
+    color:#333;
+    padding-top:5em;
+    min-height:4em;
+    border-bottom: #252422 3em solid;
+}
+
+
+img{
+height: 8em;
+vertical-align:bottom;
+
+}
+
+header a{
+  color: #222;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+header li{
+  float:left;
+  display:inline;
+  padding:0 0.5em 0 2em;
+}
+
+header #branding{
+  float:left;
+}
+header #branding h1{
+    display: inline;
+}
+header nav{
+  float: right;
+  margin-top: 1em;
+}
+header .highlight, header .current a{
+  color:#000;
+  font-weight:bold;
+}
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+section a{
+  color: #111;
+}
+section a:hover{
+color:#d2d2d2;
+}
+
+
+
+/*Showcase*/
+#showcase{
+min-height:5em;
+background:url('../img/showcase.jpg') no-repeat ;
+background-color: #000;
+background-position: center;
+text-align: center;
+color: #403D39;
+line-height: 3em;
+}
+#showcase h1{
+  margin-top:.4em;
+  font-size: 3rem;
+  margin-bottom: 2em;
+  }
+#showcase p{
+  font-size: 2em;
+
+}
+
+/*boxes*/
+
+#boxes{
+  padding-top: 2em;
+  background-color: #333;
+
+}
+#boxes .box{
+  float: left;
+  text-align: center;
+  width: 45%;
+  padding:.5em;
+
+}
+#boxes .box img{
+width:  12em;
+height: auto;
+}
+#boxes p,h3{
+  font-size: 2em;
+}
+#boxes .box h3{
+color: #333;
+}
+/*Sidebar*/
+aside#sidebar{
+  float: right;
+  width: 30%;
+  margin-top: 1em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+
+}
+/*Main-col*/
+article#main-col{
+float: left;
+ width: 65%;
+ font-size: 2em;
+ text-align: center;
+}
+
+
+
+footer{
+
+  position:fixed;
+  height: 3em;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  color: #d2d2d2;
+  background-color: #252422;
+  text-align: center;
+}
+@media print {
+  header h1{
+    padding-top:1em;
+    padding-bottom: 1em;
+  }
+  header ul{
+    display: none;
+  }
+  body,header,p{
+    font-family: Georgia, serif;
+    font-size: .75em;
+    line-height: 1em;
+    border-bottom:0;
+
+  }
+  #showcase h1{
+    margin-bottom: 0;
+    font-size: 2em;
+    line-height: 1em;
+
+  }
+}
+@media only screen and (max-width: 500px) {
+  #showcase{
+    background: none;
+  }
+
+}
