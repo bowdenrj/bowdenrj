@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\docs",
+    "\\docs\\css",
+    "\\docs\\img"
   ],
-  "SelectedNode": "\\C:\\Users\\ross_\\Source\\Repos\\bowdenrj3",
+  "SelectedNode": "\\docs\\img\\OceanBlueClouds.jpg",
   "PreviewInSolutionExplorer": false
 }
