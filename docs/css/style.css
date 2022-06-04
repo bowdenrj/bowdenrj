@@ -106,7 +106,7 @@ color:#d2d2d2;
 
 /*Showcase*/
 #showcase {
-    min-height: 15em;
+    min-height: 60em;
     background: url('../img/OceanBlueClouds.jpg') no-repeat;
     background-color: #000;
     background-position: center;
@@ -201,8 +201,10 @@ footer{
   }
 }
 @media only screen and (max-width: 500px) {
-  #showcase{
-    background: none;
-  }
-
-}
+    #showcase {
+      
+                background-size: 100%;
+                min-height: 30em;
+            
+        }
+    }
