@@ -6,13 +6,16 @@ html {
 
 footer {
     position: fixed;
-    height: 15px;
+    height: 4px;
     width: 100%;
     color: #d2d2d2;
     background-color: #252422;
     text-align: center;
     bottom: 0px;
-    font-size: .1em;
+    font-size: .7em;
+    padding-bottom: .8em;
+    line-height: 1px;
+    font-weight: bold;
 }
 
 body {
@@ -143,18 +146,18 @@ section a {
     #boxes .box {
         float: left;
         text-align: center;
-        width: 45%;
-        padding: 1em;
+        width: 49%;
+        padding: .1em;
     }
 
         #boxes .box img {
-            width: 6em;
+            width: 10em;
             height: auto;
         }
 
     #boxes p, h3 {
-        font-size: 1em;
-        line-height: 1.4em;
+        font-size: 1.4em;
+        line-height: 1.3em;
     }
 
     #boxes .box h3 {
