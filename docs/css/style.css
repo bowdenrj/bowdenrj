@@ -1,23 +1,24 @@
 html {
     background-color: #333;
-    font-size: 12px;
-    line-height: 13px;
-    margin: 12px 0;
+    font-size: 16px;
+    margin: 5px 0;
 }
 
 footer {
     position: fixed;
-    height: 13px;
+    height: 15px;
     width: 100%;
     color: #d2d2d2;
     background-color: #252422;
     text-align: center;
     bottom: 0px;
+    font-size: .1em;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: .6em;
+    font-size: .5em;
+    line-height: 1.4em;
     padding: 0;
     margin: 0;
     background-color: #f4f4f4
@@ -25,7 +26,7 @@ body {
 
 /*Global*/
 .container {
-    width: 84%;
+    width: 86%;
     margin: auto;
     overflow: hidden;
 }
@@ -41,29 +42,28 @@ ul {
     color: #999;
     margin-top: 1em;
     margin-bottom: 1em;
-    padding-left: 2em;
+    padding-left: 1em;
 }
 
 .dark {
-    padding: 1em;
+    padding: .5em;
     background: #222;
     color: #999;
-    margin-top: 1em;
+    margin-top: .3em;
     margin-bottom: 1em;
 }
 
 header {
     background: #777;
     color: #333;
-    padding-top: 1em;
-    min-height: 3em;
+    padding-top: .1em;
+    min-height: 4em;
     border-bottom: #252422 3em solid;
 }
 
 
 img {
-    padding-top: .5em;
-    height: 12em;
+    height: 6em;
     vertical-align: bottom;
 }
 
@@ -71,7 +71,7 @@ header a {
     color: #222;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ header a {
 header li {
     float: left;
     display: inline;
-    padding: 0em 0.5em 0em;
+    padding: 0em 1em .2em;
 }
 
 header #branding {
@@ -128,7 +128,7 @@ section a {
     background-position: center;
     text-align: center;
     color: #333;
-    line-height: 30em;
+    line-height: 30 em;
 }
 
 
@@ -148,13 +148,13 @@ section a {
     }
 
         #boxes .box img {
-            width: 10em;
+            width: 12em;
             height: auto;
         }
 
     #boxes p, h3 {
         font-size: 1em;
-        line-height: 1em;
+        line-height: .8em;
     }
 
     #boxes .box h3 {
@@ -164,8 +164,8 @@ section a {
 aside#sidebar {
     float: right;
     width: 40%;
-    margin-top: 1em;
-    font-size: 1em;
+    margin-top: -2em;
+    font-size: 1.1em;
     line-height: 1em;
 }
 /*Main-col*/
@@ -178,16 +178,7 @@ article#main-col {
 
 
 
-footer {
-    position: fixed;
-    height: 4em;
-    width: 100%;
-    color: #d2d2d2;
-    background-color: #252422;
-    text-align: center;
-    font-size: 4px;
-    bottom: 0px;
-}
+
 
 @media print {
     header h1 {
@@ -201,7 +192,7 @@ footer {
 
     body, header, p {
         font-family: Georgia, serif;
-        font-size: .75em;
+        font-size: 1em;
         line-height: 1em;
         border-bottom: 0;
     }
@@ -214,13 +205,12 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-
-    html {
-        font-size: 1em;
-        line-height: 1em;
+    #showcase {
+        background-size: 100%;
+        min-height: 30em;
     }
 
-    img {
-        height: 7em;
+    html {
+        font-size: 22px;
     }
 }
