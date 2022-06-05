@@ -143,7 +143,8 @@ width:  12em;
 height: auto;
 }
 #boxes p,h3{
-  font-size: 2em;
+  font-size: 1.5em;
+  line-height:2em;
 }
 #boxes .box h3{
 color: #333;
