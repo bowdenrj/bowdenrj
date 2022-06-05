@@ -153,8 +153,8 @@ section a {
         }
 
     #boxes p, h3 {
-        font-size: 1em;
-        line-height: .8em;
+        font-size: 2em;
+        line-height: 2em;
     }
 
     #boxes .box h3 {
