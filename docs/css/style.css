@@ -1,5 +1,17 @@
-html{
-  background-color: #333;
+html {
+    background-color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+footer {
+    position: fixed;
+    height: 5px;
+    width: 100%;
+    color: #d2d2d2;
+    background-color: #252422;
+    text-align: center;
+    bottom: 0px;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -19,10 +31,6 @@ body{
 
 }
 
-html {
-    cursor: pointer;
-    margin: 15px 0;
-}
 ul{
   margin:0;
   padding:0;
@@ -114,15 +122,8 @@ color:#d2d2d2;
     color: #333;
     line-height: 33em;
 }
-#showcase h1{
-  margin-top:.4em;
-  font-size: 3rem;
-  margin-bottom: 2em;
-  }
-#showcase p{
-  font-size: 2em;
 
-}
+
 
 /*boxes*/
 
@@ -139,12 +140,12 @@ color:#d2d2d2;
 
 }
 #boxes .box img{
-width:  12em;
+width:  10em;
 height: auto;
 }
 #boxes p,h3{
-  font-size: 1.5em;
-  line-height:2em;
+  font-size: 2em;
+  line-height:1em;
 }
 #boxes .box h3{
 color: #333;
@@ -172,12 +173,12 @@ footer{
 
   position:fixed;
   height: 3em;
-  left: 0;
-  bottom:0;
+ 
   width: 100%;
   color: #d2d2d2;
   background-color: #252422;
   text-align: center;
+    bottom:0px;
 }
 @media print {
   header h1{
@@ -208,4 +209,7 @@ footer{
                 min-height: 30em;
             
         }
+    .html{
+        font-size: .1em
+    }
     }
