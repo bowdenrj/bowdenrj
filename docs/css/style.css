@@ -58,7 +58,7 @@ vertical-align:bottom;
 
 }
 .dark img {
-    height: 17em;
+    height: 14em;
     vertical-align: bottom;
 }
 .dark p {
@@ -161,19 +161,23 @@ aside#sidebar{
   float: right;
   width: 48%;
   margin-top: 1em;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 2em;
+  line-height: 2em;
 
 }
 /*Main-col*/
 article#main-col{
 float: left;
  width: 48%;
- font-size: 2em;
+ font-size: 1em;
  text-align: center;
 }
 
-
+html {
+    transform: scale(1.1);
+    transform-origin: 0 0;
+    // add prefixed versions too.
+}
 
 footer{
 
