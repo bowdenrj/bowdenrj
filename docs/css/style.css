@@ -58,7 +58,11 @@ vertical-align:bottom;
 
 }
 .dark img {
-    height: 15em;
+    height: 17em;
+    vertical-align: bottom;
+}
+.dark p {
+    height: 17em;
     vertical-align: bottom;
 }
 header a{
@@ -143,7 +147,7 @@ color:#d2d2d2;
 }
 
 #boxes .box img{
-width:  24em;
+width:  18em;
 height: auto;
 }
 #boxes p,h3{
@@ -155,7 +159,7 @@ color: #333;
 /*Sidebar*/
 aside#sidebar{
   float: right;
-  width: 45%;
+  width: 48%;
   margin-top: 1em;
   font-size: 1em;
   line-height: 1.5em;
@@ -164,7 +168,7 @@ aside#sidebar{
 /*Main-col*/
 article#main-col{
 float: left;
- width: 45%;
+ width: 48%;
  font-size: 2em;
  text-align: center;
 }
@@ -206,13 +210,17 @@ footer{
 }
 @media only screen and (max-width: 500px) {
     #showcase {
-      
-                background-size: 100%;
-                min-height: 30em;
-            
-        }
+        background-size: 100%;
+        min-height: 30em;
+    }
+
+    img {
+        height: 2em;
+        vertical-align: bottom;
+    }
+
     .dark img {
         height: 5em;
         vertical-align: bottom;
     }
-    }
+}
