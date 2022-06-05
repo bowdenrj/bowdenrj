@@ -53,11 +53,14 @@ header{
 
 
 img{
-height: 8em;
+height: 6em;
 vertical-align:bottom;
 
 }
-
+.dark img {
+    height: 15em;
+    vertical-align: bottom;
+}
 header a{
   color: #222;
   text-decoration: none;
@@ -138,12 +141,13 @@ color:#d2d2d2;
   padding:.5em;
 
 }
+
 #boxes .box img{
 width:  24em;
 height: auto;
 }
 #boxes p,h3{
-  font-size: 3em;
+  font-size: 2em;
 }
 #boxes .box h3{
 color: #333;
@@ -151,16 +155,16 @@ color: #333;
 /*Sidebar*/
 aside#sidebar{
   float: right;
-  width: 35%;
+  width: 45%;
   margin-top: 1em;
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 1.5em;
 
 }
 /*Main-col*/
 article#main-col{
 float: left;
- width: 65%;
+ width: 45%;
  font-size: 2em;
  text-align: center;
 }
@@ -207,4 +211,8 @@ footer{
                 min-height: 30em;
             
         }
+    .dark img {
+        height: 5em;
+        vertical-align: bottom;
+    }
     }
