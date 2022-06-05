@@ -139,11 +139,11 @@ color:#d2d2d2;
 
 }
 #boxes .box img{
-width:  12em;
+width:  24em;
 height: auto;
 }
 #boxes p,h3{
-  font-size: 2em;
+  font-size: 3em;
 }
 #boxes .box h3{
 color: #333;
@@ -151,7 +151,7 @@ color: #333;
 /*Sidebar*/
 aside#sidebar{
   float: right;
-  width: 30%;
+  width: 35%;
   margin-top: 1em;
   font-size: 1.5em;
   line-height: 1.5em;
@@ -170,7 +170,7 @@ float: left;
 footer{
 
   position:fixed;
-  height: 3em;
+  height: 4em;
   left: 0;
   bottom:0;
   width: 100%;
