@@ -53,18 +53,11 @@ header{
 
 
 img{
-height: 6em;
+height: 8em;
 vertical-align:bottom;
 
 }
-.dark img {
-    height: 14em;
-    vertical-align: bottom;
-}
-.dark p {
-    height: 17em;
-    vertical-align: bottom;
-}
+
 header a{
   color: #222;
   text-decoration: none;
@@ -145,9 +138,8 @@ color:#d2d2d2;
   padding:.5em;
 
 }
-
 #boxes .box img{
-width:  18em;
+width:  12em;
 height: auto;
 }
 #boxes p,h3{
@@ -159,30 +151,26 @@ color: #333;
 /*Sidebar*/
 aside#sidebar{
   float: right;
-  width: 48%;
+  width: 40%;
   margin-top: 1em;
-  font-size: 2em;
-  line-height: 2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
 
 }
 /*Main-col*/
 article#main-col{
 float: left;
- width: 48%;
- font-size: 1em;
+ width: 60%;
+ font-size: 2em;
  text-align: center;
 }
 
-html {
-    transform: scale(1.1);
-    transform-origin: 0 0;
-    // add prefixed versions too.
-}
+
 
 footer{
 
   position:fixed;
-  height: 4em;
+  height: 3em;
   left: 0;
   bottom:0;
   width: 100%;
@@ -214,17 +202,9 @@ footer{
 }
 @media only screen and (max-width: 500px) {
     #showcase {
-        background-size: 100%;
-        min-height: 30em;
+      
+                background-size: 100%;
+                min-height: 30em;
+            
+        }
     }
-
-    img {
-        height: 2em;
-        vertical-align: bottom;
-    }
-
-    .dark img {
-        height: 5em;
-        vertical-align: bottom;
-    }
-}
