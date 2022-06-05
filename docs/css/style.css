@@ -1,8 +1,8 @@
 html {
     background-color: #333;
-    font-size: 16px;
-    
-    margin: 15px 0;
+    font-size: 12px;
+    line-height: 13px;
+    margin: 12px 0;
 }
 
 footer {
@@ -18,7 +18,6 @@ footer {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: .6em;
-    line-height: 16px;
     padding: 0;
     margin: 0;
     background-color: #f4f4f4
@@ -26,7 +25,7 @@ body {
 
 /*Global*/
 .container {
-    width: 80%;
+    width: 84%;
     margin: auto;
     overflow: hidden;
 }
@@ -37,7 +36,7 @@ ul {
 }
 
 .authorbox {
-    padding: 1.5em;
+    padding: 1em;
     background: #333;
     color: #999;
     margin-top: 1em;
@@ -56,14 +55,15 @@ ul {
 header {
     background: #777;
     color: #333;
-    padding-top: 5em;
-    min-height: 4em;
+    padding-top: 1em;
+    min-height: 3em;
     border-bottom: #252422 3em solid;
 }
 
 
 img {
-    height: 8em;
+    padding-top: .5em;
+    height: 12em;
     vertical-align: bottom;
 }
 
@@ -71,7 +71,7 @@ header a {
     color: #222;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -180,11 +180,12 @@ article#main-col {
 
 footer {
     position: fixed;
-    height: 3em;
+    height: 4em;
     width: 100%;
     color: #d2d2d2;
     background-color: #252422;
     text-align: center;
+    font-size: 4px;
     bottom: 0px;
 }
 
@@ -213,12 +214,13 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-    #showcase {
-        background-size: 100%;
-        min-height: 30em;
+
+    html {
+        font-size: 1em;
+        line-height: 1em;
     }
 
-    .html {
-        font-size: .1em
+    img {
+        height: 7em;
     }
 }
