@@ -1,12 +1,111 @@
 {
-  "intro": "A fictional archive contains a missing prototype, a handwritten schedule and several unexplained deliveries.",
-  "nodes": [
-    {"id":"start","title":"The archive mystery","type":"starting point","x":50,"y":12,"observation":"A prototype object was absent from an archive inventory on Monday morning.","a":"The object may have been misplaced during ordinary storage work.","b":"The object may have been deliberately moved for a planned public display.","links":["inventory","van","note"]},
-    {"id":"inventory","title":"Inventory discrepancy","type":"observation","x":22,"y":35,"observation":"A handwritten count differs from the electronic inventory by one item.","a":"A transcription or filing error could explain the discrepancy.","b":"The count may have been updated before a planned transfer was entered digitally.","links":["start","key","end"]},
-    {"id":"van","title":"Delivery van","type":"observation","x":78,"y":35,"observation":"A delivery van was recorded at the site on Sunday.","a":"The van may have delivered storage materials unrelated to the prototype.","b":"The van might have transported exhibition equipment or the prototype.","links":["start","poster","end"]},
-    {"id":"note","title":"Handwritten note","type":"observation","x":50,"y":56,"observation":"A note reads: 'Monday — move the special piece'. Its author is unknown.","a":"The note could refer to reorganising a shelf or storage item.","b":"The note could refer to moving the prototype for display.","links":["start","key","poster","end"]},
-    {"id":"key","title":"Spare key","type":"observation","x":22,"y":75,"observation":"A spare storeroom key was signed out the previous week.","a":"Routine maintenance may explain access to the room.","b":"Staff preparing the exhibition may have needed access.","links":["inventory","note","end"]},
-    {"id":"poster","title":"Event poster","type":"observation","x":78,"y":75,"observation":"A draft poster advertises an upcoming exhibition of historic prototypes.","a":"The event may be unrelated to the missing object.","b":"The object may have been selected for the exhibition.","links":["van","note","end"]},
-    {"id":"end","title":"Explore conclusion","type":"conclusion","x":50,"y":94,"observation":"These observations alone do not establish what happened.","a":"Theory A: An inventory or storage error is plausible. Confirm with a recount, access records and staff interviews.","b":"Theory B: A planned exhibition transfer is plausible. Confirm with transport manifests, exhibition plans and authorisation records.","links":["start","inventory","van","note","key","poster"]}
+  "case": {
+    "title": "The archive case",
+    "setup": "On Monday morning, a small mechanical prototype was missing from its usual place in a local history archive. Nobody has yet verified where it went.",
+    "instruction": "Read the observation, then choose which interpretation you find more persuasive. Your choice changes what you examine next.",
+    "start": "empty-cradle",
+    "totalSteps": 5,
+    "outcomes": {
+      "a": {
+        "title": "An administrative mix-up",
+        "eyebrow": "ONE POSSIBLE EXPLANATION",
+        "description": "Your choices mostly favoured ordinary errors, incomplete records and routine activity. The object might have been misfiled or shifted in storage without its records being updated.",
+        "verify": "Check the physical storerooms, reconcile inventory versions, and speak to the staff responsible for the records.",
+        "caution": "Nothing in the displayed clues establishes that a routine mistake actually happened."
+      },
+      "b": {
+        "title": "An unrecorded exhibition transfer",
+        "eyebrow": "ONE POSSIBLE EXPLANATION",
+        "description": "Your choices mostly favoured coordinated preparation. The object might have been temporarily moved for a future exhibition before the paperwork was completed.",
+        "verify": "Look for signed transfer authorisations, transport manifests, exhibition plans and a physical confirmation of the object's location.",
+        "caution": "Nothing in the displayed clues establishes that a planned transfer actually happened."
+      }
+    }
+  },
+  "clues": [
+    {
+      "id": "empty-cradle",
+      "number": "01",
+      "kind": "INITIAL OBSERVATION",
+      "title": "The empty cradle",
+      "observation": "A catalogued prototype was absent from its usual storeroom shelf on Monday morning. Its digital record still listed that location.",
+      "context": "The last confirmed sighting was the previous Thursday. There is no verified record of its movements since.",
+      "choices": [
+        {"label": "The location record may simply be out of date.", "meaning": "A record-keeping lapse could explain the discrepancy.", "leans": "a", "next": "paper-count"},
+        {"label": "Its movement may have been arranged but not entered.", "meaning": "A deliberate move could have preceded the administrative update.", "leans": "b", "next": "key-log"}
+      ]
+    },
+    {
+      "id": "paper-count",
+      "number": "02",
+      "kind": "DOCUMENT",
+      "title": "A corrected inventory",
+      "observation": "A handwritten inventory count is lower than the electronic total by exactly one item. The handwritten correction is not initialled.",
+      "context": "No date was recorded beside the correction.",
+      "choices": [
+        {"label": "An unverified correction is more likely a counting error.", "meaning": "The discrepancy may be unrelated to a physical movement.", "leans": "a", "next": "handwritten-note"},
+        {"label": "Someone may have counted the object as already moved.", "meaning": "The handwritten total could reflect a movement not yet in the system.", "leans": "b", "next": "handwritten-note"}
+      ]
+    },
+    {
+      "id": "key-log",
+      "number": "02",
+      "kind": "ACCESS RECORD",
+      "title": "A borrowed key",
+      "observation": "A spare storeroom key was signed out on Friday and returned on Monday. The log records no purpose for the loan.",
+      "context": "Staff sometimes borrow this key for general maintenance.",
+      "choices": [
+        {"label": "The key loan could be an ordinary maintenance visit.", "meaning": "The access log, by itself, does not identify a reason for entry.", "leans": "a", "next": "handwritten-note"},
+        {"label": "The timing could fit an organised relocation.", "meaning": "The borrowed key may have enabled a planned movement.", "leans": "b", "next": "handwritten-note"}
+      ]
+    },
+    {
+      "id": "handwritten-note",
+      "number": "03",
+      "kind": "HANDWRITTEN NOTE",
+      "title": "“Move the special piece”",
+      "observation": "A loose note reads: “Monday — move the special piece.” The author is unknown, and the item is not identified.",
+      "context": "The note was found among ordinary storage and event-planning papers.",
+      "choices": [
+        {"label": "It may refer to routine rearrangement of storage.", "meaning": "The phrase is too vague to connect confidently to the missing prototype.", "leans": "a", "next": "van-record"},
+        {"label": "It may refer to moving a specific object for an event.", "meaning": "The instruction could describe purposeful preparation.", "leans": "b", "next": "event-draft"}
+      ]
+    },
+    {
+      "id": "van-record",
+      "number": "04",
+      "kind": "ENTRY RECORD",
+      "title": "A weekend delivery",
+      "observation": "A delivery vehicle was admitted to the archive on Sunday. The gate register shows a time, but not the contents of its load.",
+      "context": "The archive also receives routine deliveries of packing material and supplies.",
+      "choices": [
+        {"label": "The visit may have been unrelated to the object.", "meaning": "A vehicle at the site is not evidence of what it carried.", "leans": "a", "next": "approval-form"},
+        {"label": "The vehicle might have been used to move it.", "meaning": "The visit creates a possible transport opportunity, not a confirmed transfer.", "leans": "b", "next": "approval-form"}
+      ]
+    },
+    {
+      "id": "event-draft",
+      "number": "04",
+      "kind": "DRAFT DOCUMENT",
+      "title": "An unfinished event poster",
+      "observation": "An undated draft poster advertises an upcoming exhibition of historical inventions. It contains no list of objects to be displayed.",
+      "context": "No final exhibition schedule has been located.",
+      "choices": [
+        {"label": "The exhibition might have nothing to do with this item.", "meaning": "An event theme is not a confirmed object list.", "leans": "a", "next": "approval-form"},
+        {"label": "The prototype could be part of the planned display.", "meaning": "The draft offers a possible motive for an authorised move.", "leans": "b", "next": "approval-form"}
+      ]
+    },
+    {
+      "id": "approval-form",
+      "number": "05",
+      "kind": "UNSIGNED FORM",
+      "title": "The incomplete paperwork",
+      "observation": "A blank transfer form was found in the archive office. There is no signed form in the available file, but the file may be incomplete.",
+      "context": "The archive's procedure normally requires a signed transfer authorisation.",
+      "choices": [
+        {"label": "The missing authorisation weighs against a planned transfer.", "meaning": "It may be more plausible that nobody formally arranged the movement.", "leans": "a", "next": null},
+        {"label": "The form may have been prepared but never completed.", "meaning": "A genuine plan might exist even if its paperwork was unfinished.", "leans": "b", "next": null}
+      ]
+    }
   ]
 }

@@ -1,1 +1,51 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101827"><title>Evidence Paths — Demo</title><link rel="stylesheet" href="style.css"></head><body><header><div><strong>Evidence Paths</strong><span class="muted">Interactive theory explorer · demonstration</span></div><button id="reset">Start over</button></header><main><section class="intro"><p class="eyebrow">INTERACTIVE DEMO</p><h1>One collection of clues. Two possible stories.</h1><p>Explore how the same observations might support very different circumstances. This fictional example separates observations from interpretations.</p><div class="switch" role="group" aria-label="Theory"><button class="active" data-theory="a">Theory A · Lost prototype</button><button data-theory="b">Theory B · Planned exhibition</button></div></section><div class="layout"><section class="panel map-panel"><div class="panel-head"><h2>Clue network</h2><small>Tap any clue to investigate</small></div><div id="map" class="map" aria-label="Interactive clue network"></div></section><aside class="panel detail" aria-live="polite"><div id="detail"></div></aside></div><section class="panel journey"><h2>Your exploration</h2><div id="history" class="history"></div><button id="conclusion" class="primary">View this theory's conclusion →</button></section></main><footer>Fictional demonstration · Connections are interpretations, not proof.</footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1522">
+  <meta name="description" content="An interactive investigation: examine clues, follow your interpretation, and discover where your reasoning leads.">
+  <title>Evidence Paths — The Archive Case</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#case-content">Skip to investigation</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Evidence Paths — home"><span class="brand-mark" aria-hidden="true">◇</span><span>Evidence <b>Paths</b></span></a>
+    <button class="button button-quiet" id="reset" type="button">↻ <span>Start over</span></button>
+  </header>
+
+  <main id="case-content" class="container" aria-live="off">
+    <div class="heading-row">
+      <div>
+        <div class="overline"><span class="status-dot"></span> INTERACTIVE CASE STUDY <span class="overline-separator">/</span> FICTIONAL</div>
+        <h1 id="page-title">Every clue invites an interpretation.</h1>
+        <p id="page-subtitle" class="lede">You'll see only the evidence in front of you. Decide what each observation might mean, and discover where your reasoning leads.</p>
+      </div>
+      <div class="case-index" aria-hidden="true"><span>CASE FILE</span><strong>001</strong></div>
+    </div>
+
+    <div id="app" class="app-grid">
+      <section class="panel main-panel" aria-label="Investigation" id="investigation">
+        <div class="loading">Opening the case file…</div>
+      </section>
+      <aside class="sidebar">
+        <section class="panel progress-panel" aria-labelledby="journey-title">
+          <div class="panel-heading"><h2 id="journey-title">Your route</h2><span id="progress-label" class="muted">Not started</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Investigation progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><span id="progress-fill"></span></div>
+          <ol class="route" id="route"><li class="route-empty">Your decisions will appear here as you go.</li></ol>
+          <p class="progress-footnote">The route records <em>your interpretations</em>, not established conclusions.</p>
+        </section>
+        <section class="panel guidance-panel" aria-label="How the case works">
+          <div class="guidance-icon" aria-hidden="true">↗</div>
+          <h2>Follow the evidence</h2>
+          <p>No theory is shown in advance. A choice opens the next clue; earlier decisions can be revisited.</p>
+          <p>Different combinations of choices may reach different explanations. Neither explanation is proof.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer>Demonstration with entirely fictional observations · Interpretation is not verification</footer>
+</body>
+</html>
